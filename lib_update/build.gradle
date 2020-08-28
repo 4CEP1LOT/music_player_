@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.alibaba.arouter'
+
+android {
+    compileSdkVersion 28
+
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+            universalApk false
+        }
+    }
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName this.rootProject.android.versionName
+        multiDexEnabled true
+        //ARouter配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    compileOnly rootProject.depsLibs.appcompact
+
+
+
+}

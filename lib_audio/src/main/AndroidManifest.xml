@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kotlin.lib_audio">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <application android:label="@string/app_name">
+        <activity
+            android:name=".MediaPlayer.view.FullscreenActivity"
+            android:enabled="true"
+            android:exported="false"
+            android:launchMode="singleTask" />
+
+        <service
+            android:name=".MediaPlayer.core.MusicService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+
+</manifest>

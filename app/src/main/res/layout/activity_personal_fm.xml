@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_relative"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kotlin.musiclearning.view.mine.PersonalFmActivity">
+
+    <RelativeLayout
+        android:id="@+id/music_recyclr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:elevation="20dp"
+
+        android:layout_marginTop="100dp">
+
+
+        <com.gcssloop.widget.ArcSeekBar
+            android:id="@+id/arc_seek_bar"
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:layout_centerInParent="true"
+            app:arc_colors="@array/arc_colors_default"
+            app:arc_max="100"
+            app:arc_open_angle="90"
+            app:arc_progress="0"
+
+            app:arc_rotate_angle="90"
+            app:arc_shadow_radius="10dp"
+            app:arc_thumb_color="#fff"
+            app:arc_thumb_mode="FILL"
+            app:arc_thumb_radius="10dp"
+            app:arc_thumb_width="3dp"
+            app:arc_width="10dp" />
+
+        <com.yuyakaido.android.cardstackview.CardStackView
+            android:id="@+id/card_stack_view"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:elevation="10dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="100dp">
+
+
+
+
+        </com.yuyakaido.android.cardstackview.CardStackView>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:scaleType="center"-->
+<!--        </LinearLayout>-->
+
+        <TextView
+            android:id="@+id/current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="4:30"
+            android:textColor="@color/actionbar_menu_bg"
+            android:textSize="30sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/music_recyclr"
+        android:layout_height="wrap_content"
+        android:text="4:30"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/music_content"
+        android:layout_below="@+id/total_time"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/personal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="吃饭睡觉打豆豆"
+            android:layout_marginBottom="10dp"
+          />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/personal_artist"
+            android:text="周杰伦"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/music_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/music_content"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_gravity="left"
+            android:orientation="vertical"
+            >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_delete_outline_24"/>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:elevation="3dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/personal_fm_play"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_play_arrow_24"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:elevation="3dp"
+
+            >
+
+
+                <ImageView
+                    android:id="@+id/personal_fm_next"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_skip_next_24"/>
+
+
+</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:elevation="3dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/personal_fm_like"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_like"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

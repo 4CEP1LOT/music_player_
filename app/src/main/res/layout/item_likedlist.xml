@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:text="1"
+        android:textColor="@color/color_333333"
+        android:layout_centerVertical="true"
+        android:id="@+id/item_number"/>
+
+    <TextView
+        android:layout_toRightOf="@+id/item_number"
+        android:layout_margin="10dp"
+        android:text="吃饭睡觉打豆豆"
+        android:textColor="@color/color_333333"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_liked_song"/>
+    <TextView
+        android:layout_below="@+id/item_liked_song"
+        android:layout_toRightOf="@+id/item_number"
+        android:layout_marginLeft="10dp"
+        android:text="周杰伦 -"
+        android:textColor="@color/color_333333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_liked_singer"/>
+
+
+
+
+
+</RelativeLayout>

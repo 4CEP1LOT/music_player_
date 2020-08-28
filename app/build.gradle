@@ -1,0 +1,102 @@
+  apply plugin: 'com.android.application'
+  apply plugin: 'com.alibaba.arouter'
+  apply plugin: 'AutoSave'
+  android {
+    compileSdkVersion 28
+      compileOptions {
+          sourceCompatibility JavaVersion.VERSION_1_8
+          targetCompatibility JavaVersion.VERSION_1_8
+          incremental false
+      }
+
+      splits {
+          abi {
+              enable true
+              reset()
+              include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+              universalApk false
+          }
+      }
+
+
+
+    defaultConfig {
+        applicationId "com.kotlin.musiclearning"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        multiDexEnabled true
+
+        //ARouter配置
+    javaCompileOptions {
+        annotationProcessorOptions {
+            arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+        }
+    }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    annotationProcessor rootProject.depsLibs.aroutercompiler
+    //eventbus类库依赖
+    implementation rootProject.depsLibs.eventbus
+    //greendao类库依赖
+//    implementation rootProject.depsLibs.greendao
+    //rxjava库
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //gson解析库
+
+
+//    implementation(rootProject.depsLibs.arouterapi) {
+//        exclude group: 'com.android.support'
+//    }
+
+    implementation project(path: ':lib_base')
+
+
+    implementation project(path: ':lib_search')
+    implementation 'androidx.palette:palette:1.0.0'
+//    annotationProcessor rootProject.depsLibs.aroutercompiler
+    //基础UI库
+    implementation project(':lib_common_ui')
+    //二维码扫描库
+    implementation project(':lib_qrcode')
+    //视频播放器组件
+    implementation project(':lib_video')
+    //音频播放器组
+    implementation project(':lib_audio')
+
+    implementation project(':lib_connection')
+    //自己的maven库依赖
+    //implementation 'com.imooc.android:lib_audio:1.0.0-SNAPSHOT'
+    //webview库
+    //网络请求库
+    //app下载更新库
+    implementation project(':lib_update')
+    //分享库
+    implementation project(':lib_share')
+    //图片加载库
+    implementation project(':lib_image_loader')
+    //保活库
+    implementation project(':lib_pullalive')
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
+    implementation'cn.jzvd:jiaozivideoplayer:7.4.2'
+    implementation rootProject.depsLibs.recyclerview
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.github.florent37:glidepalette:2.1.2'
+
+}

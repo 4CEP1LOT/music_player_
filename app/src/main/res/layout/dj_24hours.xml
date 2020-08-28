@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="120dp"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/new_album_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/dj_24hour_pic"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:scaleType = "centerCrop"
+            tools:srcCompat="?android:attr/autofilledHighlight" />
+        <TextView
+            android:id="@+id/dj_24hour_name"
+            android:layout_width="wrap_content"
+            android:textColor="#fffffF"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="华语"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/dj_24hour_avatar"
+            android:layout_width="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp"
+            android:layout_height="40dp"/>
+        <TextView
+            android:id="@+id/dj_24hour_creator"
+            android:layout_below="@+id/dj_24hour_avatar"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="华语"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

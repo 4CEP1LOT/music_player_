@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    app:barrierAllowsGoneWidgets="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/newsongs_linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:id="@+id/newsong_pic3"
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/newsongs_name3"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:text="吃饭睡觉打豆豆"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/newsongs_singer3"
+                android:textColor="#ffffff"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:text="周杰伦"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/newsongs_linear3"
+        android:id="@id/newsongs_linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/newsong_pic2"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/newsongs_name2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:text="吃饭睡觉打豆豆"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/newsongs_singer2"
+            android:textColor="#ffffff"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:text="周杰伦"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/newsongs_linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/newsong_pic1"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/newsongs_name1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:text="吃饭睡觉打豆豆"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/newsongs_singer1"
+            android:textColor="#ffffff"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:text="周杰伦"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+

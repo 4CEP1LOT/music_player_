@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.alibaba.arouter'
+
+android {
+    compileSdkVersion 28
+
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+            universalApk false
+        }
+    }
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        multiDexEnabled true
+        //ARouter配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    }
+
+    dependencies {
+        implementation fileTree(dir: "libs", include: ["*.jar"])
+        implementation project(path: ':lib_audio')
+//    implementation project(path: ':lib_base')
+
+
+//    annotationProcessor rootProject.depsLibs.aroutercompiler
+        implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+
+        implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+        implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+        implementation 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
+        implementation 'cn.jzvd:jiaozivideoplayer:7.4.2'
+
+
+    }
+}

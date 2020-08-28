@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.alibaba.arouter'
+
+android {
+    compileSdkVersion 28
+
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+            universalApk false
+        }
+    }
+
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName this.rootProject.android.versionName
+        multiDexEnabled true
+        //ARouter配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(path: ':lib_common_ui')
+    implementation rootProject.depsLibs.eventbus
+    implementation rootProject.depsLibs.rxjava
+    implementation rootProject.depsLibs.rxandroid
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation project(path: ':lib_connection')
+
+    implementation project(path: ':lib_image_loader')
+    implementation project(path: ':lib_base')
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'
+    implementation rootProject.depsLibs.glide
+//    implementation rootProject.depsLibs.rxandroid
+    // If you want to use the GPU Filters
+    implementation rootProject.depsLibs.viewPager2
+
+
+
+}

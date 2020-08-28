@@ -1,0 +1,17 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+<!--
+        把颜色设置为透明，导航栏为白色
+-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:fitsSystemWindows">true</item>
+<!--        转场动画-->
+        <item name="android:windowActivityTransitions">true</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+</resources>

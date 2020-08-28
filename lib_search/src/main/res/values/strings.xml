@@ -1,0 +1,10 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all">综合</string>
+    <string name="song">单曲</string>
+    <string name="album">专辑</string>
+    <string name="video_player">视频</string>
+    <string name="singer">歌手</string>
+    <string name="playlist">歌单</string>
+</resources>

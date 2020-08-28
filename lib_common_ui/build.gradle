@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.alibaba.arouter'
+
+android {
+    compileSdkVersion 28
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+            universalApk false
+        }
+    }
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        multiDexEnabled true
+
+        //ARouter配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    compileOnly rootProject.depsLibs.appcompact
+    implementation project(path: ':lib_image_loader')
+    implementation project(path: ':lib_base')
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation'com.alibaba:arouter-api:1.5.0'
+
+    annotationProcessor rootProject.depsLibs.aroutercompiler
+
+
+}
+}

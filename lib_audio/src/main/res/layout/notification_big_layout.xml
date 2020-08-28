@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/nf_album_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:id="@+id/nf_song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/nf_album_image"
+        android:textSize="14sp"
+        tools:text="歌曲名" />
+
+    <TextView
+        android:id="@+id/nf_singer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/nf_album_image"
+        android:layout_below="@id/nf_song_name"
+        tools:text="歌手"
+        />
+
+    <ImageView
+        android:id="@+id/nf_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/nf_album_image"
+        android:layout_below="@id/nf_singer_name"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nf_divider"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/nf_album_image"
+        android:paddingRight="15dp"
+        android:paddingStart="15dp">
+
+
+    <!--    ScaleType    设置缩放方式为等比例缩放    -->
+
+    <ImageView
+        android:id="@+id/nf_favorite_buttom"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="词"
+        android:layout_marginEnd="10dp"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+
+        <ImageView
+            android:id="@+id/nf_previous"
+            android:layout_marginEnd="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <ImageView
+            android:id="@+id/nf_play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="3dp" />
+        <ImageView
+            android:id="@+id/nf_next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

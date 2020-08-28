@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.kotlin.lib_video.videoplayer.video.JzvdStdTikTok
+        android:id="@+id/videoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tiktok_name"
+            android:text="\@\LILILI"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tiktok_description"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="3dp"
+            android:layout_below="@+id/tiktok_name"
+            android:maxWidth="260dp"
+            android:text="不顾苹果反对，欧盟要求所有手机统一充电接口，还要求电池可拆卸，"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="12dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_border_white">
+
+                <ImageView
+                    android:id="@+id/tiktok_avatar"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/ic_circle_red">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@mipmap/tiktok_add_star" />
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:textSize="12sp"
+            app:srcCompat="@drawable/tiktok_star_normal" />
+
+        <TextView
+            android:id="@+id/tv_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="1.1w"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/tiktok_comment_normal"/>
+
+        <TextView
+            android:id="@+id/tv_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="1.1w"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+
+        <!--        <item_new_album_jp name="android:layout_width">wrap_content</item_new_album_jp>-->
+        <!--        <item_new_album_jp name="android:layout_height">wrap_content</item_new_album_jp>-->
+        <!--        <item_new_album_jp name="android:layout_marginTop">15dp</item_new_album_jp>-->
+        <!--        <item_new_album_jp name="android:drawablePadding">2dp</item_new_album_jp>-->
+        <!--        <item_new_album_jp name="android:gravity">center</item_new_album_jp>-->
+        <!--        <item_new_album_jp name="android:textColor">@android:color/white</item_new_album_jp>-->
+        <!--        <item_new_album_jp name="android:textSize">12sp</item_new_album_jp>-->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="18dp"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            app:srcCompat="@drawable/tiktok_forward"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="58dp"
+            android:background="@drawable/tiktok_music_play" />
+    </LinearLayout>
+</FrameLayout>

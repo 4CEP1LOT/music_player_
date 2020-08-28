@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/all_playlist_pic"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp" />
+
+    <ImageView
+
+        android:id="@+id/playCount_pic"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/all_playlist_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/trackCount"
+        android:src="@android:drawable/ic_media_play" />
+
+    <ImageView
+        android:id="@+id/bookCount_pic"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/all_playlist_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/all_playlist_playCount"
+        android:src="@android:drawable/btn_star" />
+
+    <TextView
+        android:id="@+id/trackCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/all_playlist_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/all_playlist_trackCount"
+        android:text="首"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/all_playlist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/all_playlist_pic"
+        android:layout_weight="1"
+        android:text="搁浅"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/all_playlist_bookCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/all_playlist_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/bookCount_pic"
+        android:text="首"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/all_playlist_trackCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/all_playlist_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/all_playlist_pic"
+        android:text="TextView"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/all_playlist_playCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/all_playlist_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/playCount_pic"
+        android:text="首"
+        android:textSize="10sp" />
+
+
+
+
+</RelativeLayout>

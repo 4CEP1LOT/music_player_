@@ -1,0 +1,77 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.alibaba.arouter'
+
+android {
+    compileSdkVersion 28
+    compileOptions {
+        sourceCompatibility 1.7
+        targetCompatibility 1.7
+        incremental false
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+            universalApk false
+        }
+    }
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        multiDexEnabled true
+
+        //ARouter配置
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: "[lib_base]"]
+            }
+        }
+
+
+
+        }
+
+
+    }
+
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    compileOnly rootProject.depsLibs.appcompact
+    compileOnly rootProject.depsLibs.recyclerview
+    implementation project(path: ':lib_connection')
+    implementation rootProject.depsLibs.eventbus
+    implementation 'junit:junit:4.13'
+
+    api "androidx.room:room-runtime:2.2.5"
+    annotationProcessor "androidx.room:room-compiler:2.2.5"
+    api rootProject.depsLibs.gson
+
+
+    api "androidx.lifecycle:lifecycle-runtime:2.2.0"
+    api "androidx.savedstate:savedstate:1.0.0"
+    api "com.yuyakaido.android:card-stack-view:2.3.4"
+    api "androidx.viewpager2:viewpager2:1.0.0"
+    api 'com.youth.banner:banner:2.1.0'
+    api 'androidx.constraintlayout:constraintlayout:1.1.3'
+    api rootProject.depsLibs.glide
+
+    api "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0"
+    api 'com.gcssloop.widget:arc-seekbar:1.7.0'
+    api rootProject.depsLibs.rxjava
+    api rootProject.depsLibs.rxandroid
+//    implementation rootProject.depsLibs.rxandroid
+    api rootProject.depsLibs.okhttp
+    api 'androidx.viewpager2:viewpager2:1.0.0'
+    api 'androidx.cardview:cardview:1.0.0'
+    api 'androidx.palette:palette:1.0.0'
+    api "androidx.fragment:fragment:1.2.5"
+
+
+}

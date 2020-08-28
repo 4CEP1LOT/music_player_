@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".view.mine.MineFragment">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill">
+
+        <RelativeLayout
+            android:id="@+id/mine_user_layout"
+            android:layout_width="420dp"
+            android:layout_height="310dp"
+            android:background="@drawable/design"
+          >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:alpha="0.5"
+                />
+
+            <ImageView
+                android:id="@+id/mine_login_button"
+                android:layout_width="103dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="120dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/login_now" />
+
+
+
+            <LinearLayout
+                android:id="@+id/mine_login_linear"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="60dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/user_placeholder" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="登录立享手机电脑多端同步"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/mine_local_music_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="180dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/mine_local_music"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_music" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="本地音乐"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/mine_download"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@+id/mine_local_music"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+
+                        android:src="@drawable/ic_download" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="下载管理"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+
+                        android:src="@drawable/ic_radio" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+
+                        android:text="我的电台"
+                        android:textColor="#ffffff"
+
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toStartOf="@+id/mine_new_songs"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+
+                        android:src="@drawable/ic_star" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="我的收藏"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/mine_new_songs"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+
+                        android:src="@drawable/ic_disc" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="关注新歌"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mine_id_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/mine_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@drawable/api" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:layout_below="@+id/mine_user_id"
+                    android:layout_margin="10dp"
+                    android:layout_toEndOf="@+id/mine_avatar" />
+
+                <TextView
+                    android:id="@+id/mine_user_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/mine_avatar"
+                    android:text="RICARDO24"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="20dp"
+                    android:text="进入会员中心 >"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/mine_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/shape_10dp_top_corners"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/mine_card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/mine_insert_playlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/mine_recent_play"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/insert_playlist" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mine_insert_playlist"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/mine_user_fav_relative"
+                    android:layout_width="120dp"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/mine_user_fav_bg"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:alpha="0.7"
+                        android:background="@drawable/ic_personal_fm_filter" />
+
+                    <ImageView
+                        android:id="@+id/mine_user_fav_logo"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/ic_like" />
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/shuffle_button"
+                        android:text="心动模式"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mine_user_fav_logo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="我喜欢的音乐"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/mine_user_fm_relative"
+                    android:layout_width="120dp"
+                    android:layout_height="170dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/mine_user_fav_relative">
+
+                    <ImageView
+                        android:id="@+id/mine_recycler_item"
+                        android:layout_width="120dp"
+                        android:src="@drawable/ic_personal_fm_filter"
+                        android:layout_centerHorizontal="true"
+                        android:alpha="0.7"
+                        android:layout_height="170dp" />
+
+                    <ImageView
+                        android:id="@+id/mine_recycler_logo"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/radio" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mine_recycler_logo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="私人fm"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:text="超过两万人在听"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:id="@+id/mine_user_recommend_relative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/mine_user_fm_relative">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/mine_item_bg" />
+
+                    <ImageView
+                        android:id="@+id/mine_user_recommend_logo"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/ic_music"
+                        android:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mine_user_recommend_logo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="推歌精选"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:text="云贝助力好歌"
+                        android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mine_recent_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mine_titile"
+                    android:layout_marginLeft="10dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/mine_recent_play_relative"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@color/black" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_baseline_play_arrow_24" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/mine_recent_play_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toEndOf="@+id/mine_recent_play_relative"
+                        android:text="全部已播放"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/mine_recent_play_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mine_recent_play_text"
+                        android:layout_gravity="center_horizontal"
+
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/mine_recent_play_relative"
+                        android:text="300首"
+                        android:textColor="@color/black"
+
+                        android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mine_titile"
+                    android:layout_marginLeft="85dp"
+
+                    android:layout_toEndOf="@+id/mine_recent_play"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:id="@+id/mine_recent_album_relative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@color/black" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+
+                            android:src="@drawable/ic_baseline_play_arrow_24" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/mine_recent_album_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toEndOf="@+id/mine_recent_album_relative"
+                        android:text="专辑"
+                        android:textColor="@color/black"
+
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/mine_recent_album_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mine_recent_album_text"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/mine_recent_album_relative"
+                        android:text="300首"
+
+                        android:textColor="@color/black"
+
+                        android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/mine_titile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mine_user_fav_relative"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="最近播放"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/mine_star_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/mine_insert_playlist"
+                    android:text="推荐歌单"
+                    android:visibility="visible"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mine_star_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mine_star_title"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible" />
+
+
+                <RelativeLayout
+                    android:id="@+id/mine_playlist_layout"
+                    android:layout_below="@+id/mine_recent_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/mine_playlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="创建歌单"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                  />
+
+                <TextView
+                    android:id="@+id/mine_collected_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/mine_playlist"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="收藏歌单"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                   />
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mine_created_recycler"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/mine_playlist"
+                />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mine_collected_recycler"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/mine_collected_title"
+                   />
+
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

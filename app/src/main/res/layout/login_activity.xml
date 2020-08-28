@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_dark"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <com.kotlin.lib_common_ui.SpreadView
+            android:id="@+id/spreadView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:spread_delay_milliseconds="150"
+            app:spread_distance="5"
+            app:spread_max_radius="90"
+            app:spread_radius="100" />
+
+    </RelativeLayout>
+
+
+
+
+
+    <TextView
+        android:id="@+id/login_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:layout_marginBottom="110dp"
+        android:text ="登录"
+        android:textColor="@android:color/holo_red_light"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/bg_mobile_loggin"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="已同意《用户协议》和隐私政策"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="50dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textSize="15dp"
+        android:background="@drawable/bg_mobile_loggin"
+        android:hint="手机号/邮箱"
+        />
+
+    <EditText
+        android:id="@+id/passWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:paddingLeft="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_mobile_loggin"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="密码"/>
+    </LinearLayout>
+
+</RelativeLayout>

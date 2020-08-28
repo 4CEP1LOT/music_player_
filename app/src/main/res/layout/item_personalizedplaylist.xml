@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:orientation="vertical" android:layout_width="100dp"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:id="@+id/personlized_playlist_pic"
+        android:layout_height="100dp"
+        android:layout_width="100dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="15dp">
+
+        <ImageView
+            android:id="@+id/playlist_play"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_toStartOf="@+id/playlist_playCount"
+            android:src="@drawable/play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/playlist_playCount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/playlist_playCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="22万"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/playlist_play"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/personlized_playlist_text"
+        android:layout_below="@id/personlized_playlist_pic"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:singleLine="false"
+        android:layout_marginTop="10dp"
+        android:text="夏天的风我慢慢吹着清清楚楚的说你爱我"
+        />
+
+</RelativeLayout>

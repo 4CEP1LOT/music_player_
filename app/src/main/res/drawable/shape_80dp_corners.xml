@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!--上层的右边距离底层的右边3dp, 上层的底部距离底层的底部6dp-->
+    <item android:bottom="2dp"
+        android:left="3dp"
+        android:right="2dp">
+        <shape android:shape="ring">
+            <size
+                android:width="60dp"
+                android:height="60dp"/>
+            <solid android:color="#fff"/>
+        </shape>
+    </item>
+</layer-list>

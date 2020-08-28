@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/all_song_pic"
+        android:layout_marginStart="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+
+
+        />
+
+    <TextView
+        android:id="@+id/all_song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/all_song_pic"
+        android:text="天气之子"
+        android:textSize="14sp" />
+
+    <TextView
+
+
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/all_song_name"
+        android:layout_toEndOf="@+id/all_song_pic"
+        android:id="@+id/all_song_singer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="天气之子"
+        android:textSize="10dp"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>
